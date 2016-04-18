@@ -19,7 +19,10 @@
      <%= label_tag :phone %>
      <%= text_field_tag :phone %>
    </div>
-
+  <div>
+     <%= label_tag :image %>
+     <%= text_field_tag :image, @recipe.image %>
+   </div>
    <%= submit_tag "Update user" %>
  
  <% end %> 

@@ -21,6 +21,11 @@
     <%= text_field_tag :phone %>
   </div>
 
+  <div>
+   <%= label_tag :image %>
+   <%= text_field_tag :image, @recipe.image %>
+  </div>
+
   <%= submit_tag "Add" %>
 
 <% end %>

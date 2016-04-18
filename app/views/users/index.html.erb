@@ -1,4 +1,22 @@
-<table class="table">
+<h1>Users</h1>
+
+<div class="row">
+  <% @users.each do |user| %>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <a href="/users/<%= user.id %>">
+        <p><%= user.first_name %></p>
+        <p><%= user.last_name %></p>
+        <p><%= user.email %></p>
+        <p><%= user.phone %></p>
+      </a>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+<!-- <table class="table">
   <tr>
     <th>Link</th>
     <th>First Name</th>
@@ -16,5 +34,6 @@
     <td><%= user.phone %></td>
   </tr>
   <% end %>
-</table>
+</table> -->
+end
 

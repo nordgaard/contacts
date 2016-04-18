@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show'
   post '/users', to: 'users#create'
   get '/users/:id/edit', to: 'users#edit'
-  patch '/users/:id', to: 'users#update'  #this is updating the last entry, not the one I specify
+  patch '/users/:id', to: 'users#update'  
   delete '/users/:id', to: 'users#delete'
 end

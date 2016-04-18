@@ -13,11 +13,11 @@ class UsersController < ApplicationController
 
 
   def create
-    new_user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], phone: params[:phone])
+    new_user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], phone: params[:phone], image: params[:image])
+    
     new_user.save
     flash[:success] = "User Created"
-    redirect_to "/users/#{@new_user.id}"
-
+    redirect_to "/users/"
   end
 
   def edit
@@ -33,7 +33,6 @@ class UsersController < ApplicationController
     @user.save
     flash[:success] = "User Updated"
     redirect_to "/users/#{@user.id}"
-
   end
 
   def destroy
@@ -41,5 +40,6 @@ class UsersController < ApplicationController
     flash[:success] = "User Deleted"
     redirect_to "/users"
   end
+
 
 end
